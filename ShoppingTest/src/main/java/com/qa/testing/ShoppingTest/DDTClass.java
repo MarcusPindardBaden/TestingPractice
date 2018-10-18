@@ -1,33 +1,42 @@
 package com.qa.testing.ShoppingTest;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class DDTClass {
-	FileInputStream file = null;
-	XSSFSheet sheet = null;
-	XSSFCell email_address = null;
-	XSSFCell Title = null;
-	XSSFCell First_name = null;
-	XSSFCell Last_name = null;
-	XSSFCell Password = null;
-	XSSFCell Date = null;
-	XSSFCell Month = null;
-	XSSFCell Year = null;
-	XSSFCell Address = null;
-	XSSFCell Line_2 = null;
-	XSSFCell City = null;
-	XSSFCell Zip = null;
-	XSSFCell Country = null;
-	XSSFCell Add_info = null;
-	XSSFCell home_phone = null;
-	XSSFCell mobile_phone = null;
-	XSSFCell alias = null;
+	Constants constant = new Constants();
+	
+	public void inputData() throws FileNotFoundException{
+		FileInputStream file = new FileInputStream(constant.Path_TestData);
+		XSSFWorkbook workbook = null;
+		XSSFCell cell;
+		try {
+			workbook = new XSSFWorkbook(file);
+		} catch (IOException e) {
+		}
+		XSSFSheet sheet = workbook.getSheetAt(0);
+
+		for (int i = 1; i < 17; i++) {
+			for(int j=0; j<4;j++) {
+				cell = sheet.getRow(j).getCell(i);
+				cell.getStringCellValue();
+			}
+		}
+	}
+
 	
 
 	
+
 }
 
 

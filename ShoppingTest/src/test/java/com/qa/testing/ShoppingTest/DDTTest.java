@@ -1,16 +1,13 @@
 package com.qa.testing.ShoppingTest;
 
-import java.io.FileInputStream;
 
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
+import java.io.IOException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class DDTTest {
-	
-	
 	
 	
 	@Before
@@ -23,6 +20,8 @@ public class DDTTest {
 	
 	@Test
 	public void DDT() {
+		DDTClass mo = new DDTClass();
+		mo.inputData();
 		
 	}
 	
