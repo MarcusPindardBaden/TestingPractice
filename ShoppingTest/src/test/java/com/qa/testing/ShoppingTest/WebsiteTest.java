@@ -45,7 +45,7 @@ public class WebsiteTest {
 			//Initialising the test
 			test = extent.startTest("Verify application Title");
 			driver.get("http://automationpractice.com/index.php");
-			test.log(LogStatus.INFO, "Bowser started");
+			test.log(LogStatus.INFO, "Browser started");
 			HomePage page = PageFactory.initElements(driver, HomePage.class);
 			page.dressSearch("stringToSearch", driver);
 			SearchedPage page2 = PageFactory.initElements(driver, SearchedPage.class);
