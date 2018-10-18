@@ -24,13 +24,15 @@ public class DDTClass {
 		} catch (IOException e) {
 		}
 		XSSFSheet sheet = workbook.getSheetAt(0);
-
+		try {
 		for (int i = 1; i < 17; i++) {
 			for(int j=0; j<4;j++) {
 				cell = sheet.getRow(j).getCell(i);
-				cell.getStringCellValue();
+				cell.getStringCellValue(); 
 			}
 		}
+		}
+		catch(NullPointerException e) {}
 	}
 
 	

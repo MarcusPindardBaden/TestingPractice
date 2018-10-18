@@ -1,6 +1,7 @@
 package com.qa.testing.ShoppingTest;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.junit.After;
@@ -19,7 +20,7 @@ public class DDTTest {
 	
 	
 	@Test
-	public void DDT() {
+	public void DDT() throws FileNotFoundException {
 		DDTClass mo = new DDTClass();
 		mo.inputData();
 		
